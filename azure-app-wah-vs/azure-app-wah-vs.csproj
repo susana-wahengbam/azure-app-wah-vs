@@ -5,6 +5,20 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>azure_app_wah_vs</RootNamespace>
+    <ApplicationInsightsResourceId>/subscriptions/4a823d7d-5409-4920-be13-0819b610b937/resourceGroups/az-group-rg/providers/microsoft.insights/components/azure-app-wah-vs</ApplicationInsightsResourceId>
+    <UserSecretsId>5c192d68-a4bc-42ec-bed1-a2cabaecad0c</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+  </ItemGroup>
 
 </Project>

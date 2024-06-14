@@ -7,14 +7,16 @@ namespace azure_app_wah_vs.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly IConfiguration _configuration;
+        public IndexModel(ILogger<IndexModel> logger,IConfiguration configuration)
         {
             _logger = logger;
+            this._configuration = configuration;
         }
 
         public void OnGet()
         {
-
+            ViewData["Greetings"] = _configuration["Greetings"];
         }
     }
 }
