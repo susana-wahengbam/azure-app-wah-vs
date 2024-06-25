@@ -17,6 +17,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//app.UseDefaultFiles(new DefaultFilesOptions
+//{
+//    DefaultFileNames = new
+//    List<string> { "index.html" }
+//});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
